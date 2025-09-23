@@ -1,2 +1,16 @@
 name: first_workflow
 on: [push]
+
+jobs:
+  job1:
+    name: First Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job1 step 1
+      - name: Job1 step 2
+  job2:
+    name: Second Job
+    runs-on: windows-latest
+    steps:
+      - name: Job2 step 1
+      - name: Job2 step 2
