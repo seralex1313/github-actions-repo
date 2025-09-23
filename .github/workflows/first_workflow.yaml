@@ -1,4 +1,4 @@
-name: first_workflow
+name: First Workflow
 on: [push]
 
 jobs:
@@ -6,15 +6,15 @@ jobs:
     name: First Job
     runs-on: ubuntu-latest
     steps:
-      - name: Job1 step 1
+      - name: 01.01 Checking out code
         uses: actions/checkout@v2
-      - name: Job1 step 2
+      - name: 01.02 Listing environment variables
         run: env | sort
   job2:
     name: Second Job
     runs-on: windows-latest
     steps:
-      - name: Job2 step 1
+      - name: 02.01 Checking out code
         uses: actions/checkout@v2
-      - name: Job2 step 2
+      - name: 02.02 Listing environment variables
         run: "Get-ChildItem Env: | Sort-Object Name"
