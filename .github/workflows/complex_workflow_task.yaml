@@ -1,5 +1,7 @@
 name: Complex Workflow Task
-on: [push]
+on: push
+  paths:
+    - '.github/workflows/complex_workflow_task.yaml'
 jobs:
   job1:
     name: First Job
