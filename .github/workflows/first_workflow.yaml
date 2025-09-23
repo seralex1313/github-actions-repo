@@ -1,6 +1,8 @@
 name: First Workflow
-on: [push]
-
+on: 
+  push:
+    paths:
+     - '.github/workflows/first_workflow.yaml'
 jobs:
   job1:
     name: First Job
