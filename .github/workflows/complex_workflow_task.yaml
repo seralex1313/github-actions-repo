@@ -1,0 +1,28 @@
+name: Complex Workflow Task
+on: [push]
+jobs:
+  job1:
+    name: First Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: 01.01 Print date and time Ubuntu
+        run: date
+  job2:
+    name: Second Job
+    runs-on: windows-latest
+    steps:
+      - name: 02.01 Print date and time Windows
+        run: "Get-Date"
+  job3:
+    name: Third Job
+    runs-on: macos-latest
+    steps:
+      - name: 03.01 Print date and time MacOS
+        run: date
+  job4:
+    name: Fourth Job
+    runs-on: ubuntu-latest
+    depends-on: [job1, job2, job3]
+    steps:
+      - name: 04.01
+        run: echo "All previous jobs completed successfully!" 
