@@ -25,7 +25,7 @@ jobs:
   job4:
     name: Fourth Job
     runs-on: ubuntu-latest
-    depends-on: [job1, job2, job3]
+    needs: [job1, job2, job3]
     steps:
       - name: 04.01
         run: echo "All previous jobs completed successfully!" 
