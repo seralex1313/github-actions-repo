@@ -3,6 +3,10 @@ on:
   push:
     paths:
      - '.github/workflows/challenge_workflow_task.yaml'
+
+env:
+  VAR_ARTIFACT_CHALLENGE: "challenge-artifact"
+
 jobs:
   job1:
     name: First Job
@@ -14,4 +18,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.VAR_ARTIFACT_CHALLENGE }}
-          path: ./${{ env.VAR_ARTIFACT_CHALLENGE }}
+          path: .
