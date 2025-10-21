@@ -1,0 +1,17 @@
+name: Challenge Workflow Task
+on: 
+  push:
+    paths:
+     - '.github/workflows/challenge_workflow_task.yaml'
+jobs:
+  job1:
+    name: First Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step checkout
+        uses: actions/checkout@v2
+      - name: Step upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: sample-artifact
+          path: ./${{ env.VAR_ARTIFACT_CHALLENGE }}
